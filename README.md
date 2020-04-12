@@ -6,4 +6,48 @@ Aplikacija je funkcionalna i online je: https://test--platform.herokuapp.com
 
 ## POČETNA STRANICA
 
-![alt text]()
+![alt text](https://github.com/suncica-negra/Test-Platform/blob/master/public/test1.png)
+
+## REGISTRACIJA
+
+![alt text](https://github.com/suncica-negra/Test-Platform/blob/master/public/test2.png)
+
+## PRIJAVA
+
+![alt text](https://github.com/suncica-negra/Test-Platform/blob/master/public/test3.png)
+
+## POČETNA - ADMIN LOGIRAN
+
+![alt text](https://github.com/suncica-negra/Test-Platform/blob/master/public/test4.png)
+
+## PRIMJER TESTA
+
+![alt text](https://github.com/suncica-negra/Test-Platform/blob/master/public/test5.png)
+
+## PRIMJER TESTA
+
+![alt text](https://github.com/suncica-negra/Test-Platform/blob/master/public/test6.png)
+
+## PRIMJER TESTA
+
+![alt text](https://github.com/suncica-negra/Test-Platform/blob/master/public/test7.png)
+
+## BAZA TESTOVA
+
+![alt text](https://github.com/suncica-negra/Test-Platform/blob/master/public/test8.png)
+
+## BAZA KORISNIKA
+
+![alt text](https://github.com/suncica-negra/Test-Platform/blob/master/public/test9.png)
+
+## BAZA SESIJA
+
+![alt text](https://github.com/suncica-negra/Test-Platform/blob/master/public/test10.png)
+
+## BAZA DNEVNIH ISPITA
+
+![alt text](https://github.com/suncica-negra/Test-Platform/blob/master/public/test11.png)
+
+## LOGIRAN KORISNIK KOJI NIJE ADMIN
+
+![alt text](https://github.com/suncica-negra/Test-Platform/blob/master/public/test12.png)
