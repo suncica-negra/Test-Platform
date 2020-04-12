@@ -1,0 +1,53 @@
+<%- include("partials/header"); -%>
+<div class="">
+   <div class="row mb-3 row1">
+      <%- include("partials/menu"); -%>
+      <div class="col-md-8 themed-grid-col">
+         <h2 class="srednji">Registriraj se</h2>
+         <div class="alert alert-error">
+            <div class="flashes">
+               <% if (messages) { %>
+               <% if (messages.error) { %>
+               <div class="flash error"><%= messages.error %></div>
+               <% } %>
+               <% } %>
+            </div>
+         </div>
+         <div class="card">
+            <div class="card-body">
+               <form action="/register" method="POST">
+                  <div class="form-group">
+                     <label for="ime">Ime i prezime</label>
+                     <input class="form-control" placeholder="Upišite ime i prezime" name="name" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="korisnicko">Korisničko ime *</label>
+                     <input class="form-control" placeholder="Upišite korisničko ime" name="username" required>
+                  </div>
+                  <div class="form-group">
+                     <div class="form-group">
+                        <label for="razred">Razred</label>
+                        <select name="classroom" class="form-control col-sm-12 margin" id="exampleFormControlSelect1" required>
+                           <option value="1.">1.</option>
+                           <option value="2.">2.</option>
+                           <option value="3.">3.</option>
+                           <option value="4.">4.</option>
+                           <option value="nastavnik / gost">nastavnik / gost</option>
+                        </select>
+                     </div>
+                  </div>
+                  <div class="form-group">
+                     <label for="password">Zaporka / šifra **</label>
+                     <input type="password" class="form-control" placeholder="Upišite Vašu zaporku / šifru koja mora sadržavati minimalno 6 znakova" name="password" required pattern=".{6,}">
+                  </div>
+                  <p><small>* Ukoliko je korisničko ime jednako već upisanom u bazu ne možete se registrirati. Korisničko ime mora biti jedinstveno.</small></p>
+                  <p><small>** Zapiši, spremi, upamti.</small></p>
+                  <p><b class="usklicnik">⚠️</b> <small>Ustupljeni osobni podaci niti rezultati ispita se neće dijeliti s trećim osobama. Brinemo o Vašoj sigurnosti.</small></p>
+                  <button type="submit" class="btn btn-dark">Registriraj me</button>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<%- include("partials/footer"); -%>

@@ -1,0 +1,173 @@
+body {
+  background: #d3d3e0;
+  font-family: Quantico;
+  font-weight: 100;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  border: 1px solid #9c9c9c;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  border: 1px solid #9c9c9c;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.test {
+  color: #62b01e;
+  font-weight: 100;
+  font-size: 40px;
+  margin: 20px 10px;
+}
+
+.hr {
+  border: 0;
+  height: 2px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+#clockdiv {
+  font-family: Quantico;
+  color: #fff;
+  display: inline-block;
+  font-weight: 100;
+  text-align: center;
+  font-size: 30px;
+  margin: 50px 0px;
+}
+
+#clockdiv>div {
+  padding: 10px;
+  border-radius: 3px;
+  background: #4b8bf2;
+  display: inline-block;
+}
+
+#clockdiv div>span {
+  padding: 15px;
+  border-radius: 3px;
+  background: #111a99;
+  display: inline-block;
+}
+
+.smalltext {
+  padding-top: 5px;
+  font-size: 16px;
+}
+
+.img {
+  height: 48px;
+  width: 48px;
+  margin-left: 10px;
+}
+
+.img1 {
+  height: auto;
+  width: 100%;
+  max-width: 484.4px;
+  margin-bottom: 40px;
+}
+
+.img2 {
+  height: 134.4px;
+  width: 192px;
+  margin-bottom: 40px;
+}
+
+.footer {
+  padding-top: 25px;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 115px;
+  background-color: #62b01e;
+}
+
+.orhidea {
+  color: #111a99;
+}
+
+.container {
+  margin-left: 10px;
+  margin-right: 0;
+  padding: 0;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.right {
+  display: table;
+  width: 100%;
+}
+
+.d-table-cell {
+  display: table-cell;
+}
+
+.tar {
+  text-align: right;
+  padding-right: 10px;
+}
+
+.letter {
+  letter-spacing: 5px;
+}
+
+.btn-primary {
+  background-color: #111a99;
+  border-color: #111a99;
+}
+
+.btn-success {
+  background-color: #62b01e;
+  border-color: #62b01e;
+}
+
+.btn-light {
+  background-color: #d3d3e0;
+  border-color: #d3d3e0;
+}
+
+.probni {
+  margin: 50px 0px;
+}
+
+.hidden {
+  display: none;
+}
+
+.usklicnik {
+  font-size: 30px;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}
+
+.data {
+  text-align: center;
+}
+
+.row1 {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.srednji {
+  margin-top: 30px;
+}

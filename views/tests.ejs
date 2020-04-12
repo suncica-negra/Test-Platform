@@ -1,0 +1,62 @@
+<%- include('partials/header1') %>
+<div class="container">
+   <div class="row mb-3">
+      <%- include("partials/menu1"); -%>
+      <div class="col-md-8 themed-grid-col data">
+         <h2>Baza testova:</h2>
+         <table>
+            <tr>
+               <th>Datum predavanja</th>
+               <th>Učenik</th>
+               <th>Kod testa</th>
+               <th>Odgovor</th>
+               <th>Odgovor</th>
+               <th>Odgovor</th>
+               <th>Odgovor</th>
+               <th>Odgovor</th>
+               <th>Odgovor</th>
+               <th>Odgovor</th>
+               <th>Odgovor</th>
+               <th>Odgovor</th>
+               <th>Odgovor</th>
+               <th>Odgovor</th>
+               <th>Odgovor</th>
+               <th>Odgovor</th>
+               <th>Odgovor</th>
+               <th>Odgovor</th>
+               <th>Odgovor</th>
+            </tr>
+            <%  tests.forEach(function(test){ %>
+            <% var day = test.date.getDate() %>
+            <% var month = test.date.getMonth() %>
+            <% var year = test.date.getFullYear() %>
+            <% var hours = test.date.getHours() %>
+            <% var minutes = "0" + test.date.getMinutes() %>
+            <% var dateString = day + "." +(month + 1) + "." + year + " " + hours + ":" + minutes.substr(-2) %>
+            <tr>
+               <td><small><%= dateString %></small></td>
+               <td><small><%= test.username %></small></td>
+               <td><small><%= test.odgovor8 %></small></td>
+               <td><small><%= test.odgovor1 %></small></td>
+               <td><small><%= test.odgovor2 %></small></td>
+               <td><small><%= test.odgovor3a %></small></td>
+               <td><small><%= test.odgovor3b %></small></td>
+               <td><small><%= test.odgovor3c %></small></td>
+               <td><small><%= test.odgovor3d %></small></td>
+               <td><small><%= test.odgovor3e %></small></td>
+               <td><small><%= test.odgovor3f %></small></td>
+               <td><small><%= test.odgovor4 %></small></td>
+               <td><small><%= test.odgovor5 %></small></td>
+               <td><small><%= test.odgovor6 %></small></td>
+               <td><small><%= test.odgovor7a %></small></td>
+               <td><small><%= test.odgovor7b %></small></td>
+               <td><small><%= test.odgovor7c %></small></td>
+               <td><small><%= test.odgovor7d %></small></td>
+               <td><small><%= test.odgovor7e %></small></td>
+            </tr>
+            <% }) %>
+         </table>
+      </div>
+   </div>
+</div>
+<%- include("partials/footer"); -%>

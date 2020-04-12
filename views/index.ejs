@@ -1,0 +1,22 @@
+<%- include('partials/header') %>
+<div class="">
+   <div class="row mb-3 row1">
+      <%- include("partials/menu"); -%>
+      <div class="col-md-8 themed-grid-col data">
+         <div class="alert alert-error">
+            <div class="flashes">
+               <% if (messages) { %>
+               <% if (messages.success) { %>
+               <div class="flash error"><%= messages.success %></div>
+               <% } %>
+               <% } %>
+            </div>
+         </div>
+         <h4 class="srednji">
+            Da bi mogli pristupiti ispitu morate biti prijavljeni u sustav.
+         </h4>
+         <img src="/testing.png" class="img1" title="Izvor: Pixabay">
+      </div>
+   </div>
+</div>
+<%- include("partials/footer"); -%>

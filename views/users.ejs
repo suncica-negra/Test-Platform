@@ -1,0 +1,24 @@
+<%- include('partials/header1') %>
+<div class="container">
+   <div class="row mb-3">
+      <%- include("partials/menu1"); -%>
+      <div class="col-md-8 themed-grid-col data">
+         <h2>Baza korisnika / učenika:</h2>
+         <table>
+            <tr>
+               <th>Učenik</th>
+               <th>Razred</th>
+               <th>username</th>
+            </tr>
+            <%  users.forEach(function(user){ %>
+            <tr>
+               <td><%= user.name %></td>
+               <td><%= user.classroom %></td>
+               <td><%= user.username %></td>
+            </tr>
+            <% }) %>
+         </table>
+      </div>
+   </div>
+</div>
+<%- include("partials/footer"); -%>

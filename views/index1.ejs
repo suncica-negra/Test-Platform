@@ -1,0 +1,29 @@
+<%- include('partials/header1') %>
+<div class="">
+   <div class="row mb-3 row1">
+      <%- include("partials/menu1"); -%>
+      <div class="col-md-8 themed-grid-col">
+         <div class="alert alert-error">
+            <div class="flashes">
+               <% if (messages) { %>
+               <% if (messages.success) { %>
+               <div class="flash error"><%= messages.success %></div>
+               <% } %>
+               <% } %>
+            </div>
+         </div>
+         <h2>
+            Upute za rješavanje testova:
+         </h2>
+         <div class="probni">
+            <p>VAŽNO! Kad jednom otvorite test nemojte refrešati (osvježiti) stranicu niti birati opciju "Back" jer nećete moći završiti test!</p>
+            <p>VAŽNO! Nemojte na X zatvarati prozor u kojem vam se test otvori jer ga nećete moći ponovno pokrenuti!</p>
+            <p>Test je vremenski ograničen pa vodite računa o preostalom vremenu. Po isteku vremena test se automatski zatvara ukoliko to niste sami napravili prije i odgovori se spremaju. Također uz svako pitanje stoji redni broj, ali i ukupan broj pitanja da znate koliko još imate pitanja do kraja.</p>
+            <p>Veličinu ekrana testa prilagodite svojim afinitetima.</p>
+            <p>Spremni ste početi? S lijeve strane u izborniku odaberite test koji želite.</p>
+            <p>Sretno! :) </p>
+         </div>
+      </div>
+   </div>
+</div>
+<%- include("partials/footer"); -%>

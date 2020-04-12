@@ -1,0 +1,20 @@
+<%- include("partials/header"); -%>
+<div class="container">
+   <div class="row mb-3">
+      <%- include("partials/menu"); -%>
+      <div class="col-md-8 themed-grid-col data">
+         <div class="error">
+            <h4>ERROR</h4>
+            <h5>Došlo je do pogreške.</h5>
+            <h5>Pokušajte ponovno.</h5>
+            <img src="/error.png" class="img1">
+         </div>
+         <script>
+            setTimeout(function(){
+            history.back();
+                  }, 2500)
+         </script>
+      </div>
+   </div>
+</div>
+<%- include("partials/footer"); -%>

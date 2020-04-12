@@ -1,0 +1,34 @@
+<%- include("partials/header"); -%>
+<div class="">
+   <div class="row mb-3 row1">
+      <%- include("partials/menu"); -%>
+      <div class="col-md-8 themed-grid-col">
+         <h2 class="srednji">Prijavi se</h2>
+         <div class="alert alert-error">
+            <div class="flashes">
+               <% if (messages) { %>
+               <% if (messages.error) { %>
+               <div class="flash error"><%= messages.error %></div>
+               <% } %>
+               <% } %>
+            </div>
+         </div>
+         <div class="card">
+            <div class="card-body">
+               <form action="/login" method="POST">
+                  <div class="form-group">
+                     <label for="email">Korisničko ime</label>
+                     <input class="form-control" placeholder="Upišite Vaše korisničko ime" name="username" required>
+                  </div>
+                  <div class="form-group">
+                     <label for="password">Zaporka / šifra</label>
+                     <input type="password" class="form-control" placeholder="Upišite Vašu zaporku / šifru" name="password" required>
+                  </div>
+                  <button type="submit" class="btn btn-dark">Prijavi me</button>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<%- include("partials/footer"); -%>

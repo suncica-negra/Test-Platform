@@ -1,0 +1,162 @@
+<%- include('partials/header1') %>
+<div class="">
+   <div class="row mb-3 row1">
+      <%- include("partials/menu"); -%>
+      <div class="col-md-8 themed-grid-col">
+         <div class="alert alert-error">
+            <div class="flashes">
+               <% if (messages) { %>
+               <% if (messages.success) { %>
+               <div class="flash error"><%= messages.success %></div>
+               <% } %>
+               <% } %>
+            </div>
+         </div>
+         <h4 class="srednji">
+            Probni test.
+         </h4>
+         <div class="probni">
+            <p>VAŽNO! Kad jednom otvorite test nemojte refrešati (osvježiti) stranicu niti birati opciju "Back" jer nećete moći završiti test!</p>
+            <p>VAŽNO! Nemojte na X zatvarati prozor u kojem vam se test otvori jer ga nećete moći ponovno pokrenuti!</p>
+            <p>Ovo je probni test kojemu je cilj testirati platformu i vidjeti ima li negdje problema koje treba ispraviti prije "stvarnog ispita znanja". Test je vremenski ograničen pa vodite računa o preostalom vremenu. Po isteku vremena test se automatki zatvara i odgovori se spremaju ukoliko to niste sami napravili prije isteka vremena.</p>
+            <p>Sretno! ㋡</p>
+            <button type="button" class="btn btn-secondary" id="onclick" onclick="myFunction()">Idi na test</button>
+         </div>
+         <form action="/probni_test" method="post">
+            <div class="prvo hidden" id="myDIV" >
+               <h5>1/7. Kako se nosite s karantenom / (samo)izolacijom?</h5>
+               <div class="radio">
+                  <label><input type="radio" name="prvo" value="Dobro. Uživam u vremenu provedenom s obitelji i ne zabrinjavam se previše."> Dobro. Uživam u vremenu provedenom s obitelji i ne zabrinjavam se previše.</label>
+               </div>
+               <div class="radio">
+                  <label><input type="radio" name="prvo" value="Loše. Teško mi pada nemogućnost izlazaka i druženja s prijateljima. Jako se bojim za budućnost."> Loše. Teško mi pada nemogućnost izlazaka i druženja s prijateljima. Jako se bojim za budućnost.</label>
+               </div>
+               <div class="radio">
+                  <label><input type="radio" name="prvo" value="Prilagođavam se situaciji i ne pada mi posebno teško iako se ponekad brinem."> Prilagođavam se situaciji i ne pada mi posebno teško iako se ponekad brinem.</label>      
+               </div>
+               <button type="button" class="btn btn-secondary" onclick="myFunction1()">sljedeće pitanje</button>
+            </div>
+            <div class="drugo hidden" id="myDIV1" >
+               <h5>2/7. Sviđa li vam se nastava preko računala / interneta?</h5>
+               <div class="radio">
+                  <label><input type="radio" name="drugo" value="DA, jako. Ne želim se nikada vratiti u školu."> DA, jako. Ne želim se nikada vratiti u školu.</label>
+               </div>
+               <div class="radio">
+                  <label><input type="radio" name="drugo" value="NE, nikako. Želim čim prije u školu."> NE, nikako. Želim čim prije u školu.</label>
+               </div>
+               <div class="radio">
+                  <label><input type="radio" name="drugo" value="Bilo bi dobro da se PONEKAD i u normalnim okolnostima nastava održava preko računala / interneta."> Bilo bi dobro da se PONEKAD i u normalnim okolnostima nastava održava preko računala / interneta.</label>      
+               </div>
+               <div class="radio">
+                  <label><input type="radio" name="drugo" value="Ne mogu se odlučiti."> Ne mogu se odlučiti.</label>      
+               </div>
+               <button type="button" class="btn btn-secondary" onclick="myFunction2()">sljedeće pitanje</button>
+            </div>
+            <div class="trece hidden" id="myDIV2" >
+               <h5>3/7. Koje predmete najlakše učite preko računala / interneta?</h5>
+               <div class="checkbox">
+                  <label><input type="checkbox" value="Predmete gdje treba ´sjesti i naučiti´ poput hrvatskog, stranog jezika, povijesti, geografije, biologije..." name="trece"> Predmete gdje treba "sjesti i naučiti" poput hrvatskog, stranog jezika, povijesti, geografije, biologije...</label>
+               </div>
+               <div class="checkbox">
+                  <label><input type="checkbox" value="Predmete gdje treba nešto računati poput matematike, fizike, kemije..." name="trece1"> Predmete gdje treba nešto računati poput matematike, fizike, kemije...</label>
+               </div>
+               <div class="checkbox">
+                  <label><input type="checkbox" value="Predmete vezane uz umjetnost poput likovnog, glazbenog..." name="trece2"> Predmete vezane uz umjetnost poput likovnog, glazbenog...</label>
+               </div>
+               <div class="checkbox">
+                  <label><input type="checkbox" value="Vjerske predmete" name="trece3"> Vjerske predmete</label>
+               </div>
+               <div class="checkbox">
+                  <label><input type="checkbox" value="Tjelesnu kulturu" name="trece4"> Tjelesnu kulturu</label>
+               </div>
+               <div class="checkbox">
+                  <label><input type="checkbox" value="Predmete iz struke poput tehničkog crtanja, tehničkih materijala, obrade materijala, tehničke mehanike, hidraulike i pneumatike, elemenata strojeva, strojarskih konstrukcija..." name="trece5"> Predmete iz struke poput tehničkog crtanja, tehničkih materijala, obrade materijala, tehničke mehanike, hidraulike i pneumatike, elemenata strojeva, strojarskih konstrukcija...</label>
+               </div>
+               <div class="checkbox">
+                  <label><input type="checkbox" value="Predmete vezane uz praktičan rad (praktikum)" name="trece6"> Predmete vezane uz praktičan rad (praktikum)</label>
+               </div>
+               <button type="button" class="btn btn-secondary" onclick="myFunction3()">sljedeće pitanje</button>
+            </div>
+            <div class="cetvrto hidden" id="myDIV3" >
+               <h5>4/7. Što vam najviše fali tijekom karantene / (samo)izolacije?</h5>
+               <div class="form-group">
+                  <em><label for="comment"> Upiši odgovor:</label></em>
+                  <textarea class="form-control" rows="5" id="comment" name="cetvrto"></textarea>
+               </div>
+               <button type="button" class="btn btn-secondary" onclick="myFunction4()">sljedeće pitanje</button>
+            </div>
+            <div class="hidden" id="myDIV4" >
+               <h5>5/7. Kako vam za sad ide nastava fizike? Opišite s kojim problemima i izazovima ste se sreli!</h5>
+               <div class="form-group">
+                  <textarea class="form-control" rows="5" id="comment" name="peto"></textarea>
+               </div>
+               <button type="button" class="btn btn-secondary" onclick="myFunction7()">sljedeće pitanje</button>
+            </div>
+            <div class="hidden" id="myDIV5" >
+               <h5>6/7. Sami si zadajte pitanje iz fizike i odgovorite na njega! Jedini uvjet je da pitanje bude iz dijela gradiva kojeg ste radili sami doma otkad je počela nastava preko interneta (dakle od 16.3. pa na dalje).</h5>
+               <p>OBAVEZNO mora pisati i pitanje, a ne samo odgovor!</p>
+               <div class="form-group">
+                  <textarea class="form-control" rows="5" id="comment" name="sesto"></textarea>
+               </div>
+               <button type="button" class="btn btn-secondary" onclick="myFunction8()">sljedeće pitanje</button>
+            </div>
+            <div class="peto hidden" id="myDIV6" >
+               <h5>7/7. Jeste li imali nekih problema s rješavanjem ovog testa?</h5>
+               <div class="checkbox">
+                  <label><input type="checkbox" value="Nisam. Sve je prošlo super i bez problema." name="sedmo"> Nisam. Sve je prošlo super i bez problema.</label>
+               </div>
+               <div class="checkbox">
+                  <label><input type="checkbox" value="Bilo je problema s internetom i spajanjem na internet." name="sedmo1"> Bilo je problema s internetom i spajanjem na internet.</label>
+               </div>
+               <div class="checkbox">
+                  <label><input type="checkbox" value="Bilo je problema s registracijom i/ili prijavom u sustav." name="sedmo2"> Bilo je problema s registracijom i/ili prijavom u sustav.</label>
+               </div>
+               <div class="checkbox">
+                  <label><input type="checkbox" value="Bilo je problema s brojačem vremena." name="sedmo3"> Bilo je problema s brojačem vremena.</label>
+               </div>
+               <div class="form-group">
+                  <label for="comment" > Ukoliko se gore navedeni problemi ne odnose na vas ili ste imali (uz gore nevedeni) još neki problem tada samostalno opišite problem(e) ovdje:</label>
+                  <textarea class="form-control" rows="5" id="comment" name="sedmo4"></textarea>
+               </div>
+               <div class="form-check disabled probni">
+                  <input class="form-check-input" type="radio" id="exampleRadios3" value="probni_test_01" name="kod" checked required>
+                  <label class="form-check-label" for="exampleRadios3">
+                  kod: probni_test_01
+                  </label>
+               </div>
+               <input id="autoClick" class="btn btn-success" type="submit" value="Spremi i završi" />
+         </form>
+         </div>
+         <div id="clockdiv">
+            <div>
+               <span id='timer' class="seconds" name="time"></span>
+               <div class="smalltext">Seconds</div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+</div>
+<script type = "text/javascript" >
+   history.pushState(null, null, 'pagename');
+   window.addEventListener('popstate', function(event) {
+   history.pushState(null, null, 'pagename');
+   });
+   
+   
+   
+       function disableF5(e) { if ((e.which || e.keyCode) == 116 || (e.which || e.keyCode) == 82) e.preventDefault(); };
+   $(document).ready(function(){
+        $(document).on("keydown", disableF5);
+   });
+   
+   
+   
+   document.addEventListener('contextmenu', event => event.preventDefault());
+   
+   
+   
+   
+   
+</script>
+<%- include("partials/footer"); -%>
