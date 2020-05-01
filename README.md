@@ -2,7 +2,7 @@
 
 _English_
 
-The application was created as response to the need to examine, evaluate and monitor students activities during online classes while schools are closed during the virus corona. Exams are time-limited, open in a new window with _refresh_, _back_ and _reload_ options blocked. Exams are saved in the MongoDB database from which they can be exported. User sessions are also saved i data base.
+The application was created as response to the need to examine, evaluate and monitor students activities during online classes while schools are closed during the virus corona. Exams are time-limited, open in a new window with _refresh_, _back_ and _reload_ options blocked. Exams are saved in the MongoDB database from which they can be exported. User sessions are also saved in data base.
 
 Has a responsive design and looks good on smaller screens (cell phone ...)
 
