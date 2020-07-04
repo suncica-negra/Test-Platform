@@ -8,7 +8,7 @@ Has a responsive design and looks good on smaller screens (cell phone ...)
 
 Tools Used: **HTML, CSS, JavaScript, Node.js, Express.js, EJS, MongooDB**
 
-The application is functional and is online: https://test--platform.herokuapp.com
+The application is functional and online: https://test--platform.herokuapp.com
 
 ****************************************
 
