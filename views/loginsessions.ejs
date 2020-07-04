@@ -16,7 +16,7 @@
             <% var hours = loginsession.dateOfLogin.getHours() %>
             <% var minutes = "0" + loginsession.dateOfLogin.getMinutes() %>
             <% var seconds = "0" + loginsession.dateOfLogin.getSeconds() %>
-            <% var dateString = day + "." +(month + 1) + "." + year + " " + hours + ":" + minutes.substr(-2) + ":" + seconds.substr(-2) %>
+            <% var dateString = day + "." +(month + 1) + "." + year + ". " + (hours+2) + ":" + minutes.substr(-2) + ":" + seconds.substr(-2) %>
             <tr>
                <td><%= loginsession.username %></td>
                <td><%= dateString %></td>

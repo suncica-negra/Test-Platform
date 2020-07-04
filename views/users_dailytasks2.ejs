@@ -1,0 +1,33 @@
+<%- include('partials/header2') %>
+<div class="">
+   <div class="row mb-3 row1">
+      <%- include("partials/menu1"); -%>
+      <div class="col-md-8 themed-grid-col">
+         <h4 class="srednji">
+            Moji poslani dnevni zadaci tj. dani kada sam bi-la/-o prisut-na/-an na satu fizike:
+         </h4>
+         <table>
+            <tr>
+               <th>Moj odgovor</th>
+               <th>Vrijeme spremanja</th>
+               <th>Datum sata fizike (kod)</th>
+            </tr>
+            <%  dailytasks.forEach(function(dailytask){ %>
+            <% var day = dailytask.date.getDate() %>
+            <% var month = dailytask.date.getMonth() %>
+            <% var year = dailytask.date.getFullYear() %>
+            <% var hours = dailytask.date.getHours() %>
+            <% var minutes = "0" + dailytask.date.getMinutes() %>
+            <% var seconds = "0" + dailytask.date.getSeconds() %>
+            <% var dateString = day + "." +(month + 1) + "." + year + ". " + (hours+2) + ":" + minutes.substr(-2) + ":" + seconds.substr(-2) %>
+            <tr>
+               <td><%= dailytask.daytask %></td>
+               <td><%= dateString %></td>
+               <td><%= dailytask.kod %></td>
+            </tr>
+            <% }) %>
+         </table>
+      </div>
+   </div>
+</div>
+<%- include("partials/footer"); -%>

@@ -1,20 +1,20 @@
 <%- include('partials/header1') %>
-<div class="container">
-   <div class="row mb-3">
+<div class="">
+   <div class="row mb-3 row1">
       <%- include("partials/menu1"); -%>
       <div class="col-md-8 themed-grid-col data">
-         <h2>Baza korisnika / učenika:</h2>
+         <h4>Učenici 2. razreda i njihovi dnevni zadaci:</h4>
          <table>
             <tr>
                <th>Učenik</th>
                <th>Razred</th>
-               <th>username</th>
+               <th>Odgovor</th>
             </tr>
-            <%  users.forEach(function(user){ %>
+            <%  user.forEach(function(user){ %>
             <tr>
-               <td>  <a type="submit" class="btn btn-outline-secondary btn-sm letter" id="odjava" href="/users/<%= user._id %>"> <%= user.name %></a> </td>
+               <td><%= user.name %></td>
                <td><%= user.classroom %></td>
-               <td><%= user.username %></td>
+               <td><%= user.dailytasks %></td>
             </tr>
             <% }) %>
          </table>

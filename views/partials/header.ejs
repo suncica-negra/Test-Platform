@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="hr-HR">
    <head>
       <title>Test Platform</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="Pratite aktivnost svojih učenika putem dnevnih zadataka. Pisanje online ispita.">
+      <meta name="keywords" content="Ispit, dnevni zadatak, praćenje učenika">
+      <meta name="author" content="O.K.">
       <link href="https://fonts.googleapis.com/css?family=Quantico:400,700&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
       <link rel="stylesheet" href="/css/style.css">
@@ -12,15 +15,15 @@
          src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
          integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
          crossorigin="anonymous"></script>
-      <script type="text/javascript" src="/script.js"></script>
+      <script src="/script.js"></script>
    </head>
    <body >
       <hr class="hr">
       <div class="right">
-         <p class="test d-table-cell"><a href="/"><img class="img" src="/title-test.png" title="Početna"></a> - Test Platform</p>
+         <p class="test d-table-cell"><a href="/"><img class="img" src="/title-test.png" title="Početna" alt="title-test"></a> - Test Platform</p>
          <div class="d-table-cell tar">
-            <a type="submit" class="btn btn-light btn-sm letter" id="register"><small>Dobrodošli </small><%= korisnik %></a>
-            <a type="submit" class="btn btn-primary btn-sm letter" id="register" href="/register">Registracija</a>
+            <a type="submit" class="btn btn-light btn-sm letter" id="register" href="/"><small>Dobrodošli </small><%= korisnik %></a>
+            <a type="submit" class="btn btn-primary btn-sm letter" id="register1" href="/register">Registracija</a>
             <a type="submit" class="btn btn-success btn-sm letter" id="prijava" href="/login">Prijava</a>
          </div>
       </div>

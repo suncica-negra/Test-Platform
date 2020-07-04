@@ -1,0 +1,25 @@
+<%- include('partials/header1') %>
+<div class="">
+   <div class="row mb-3 row1">
+      <%- include("partials/menu1"); -%>
+      <div class="col-md-8 themed-grid-col">
+         <h2>
+            Odaberi opciju:
+         </h2>
+         <div class="probni">
+            <div class="container con col-8">
+               <form action="/filterdailytask1" method="get">
+                  <button type="submit" name="button" class="btn btn-outline-success btn-lg btn-block plan"><i>dokaz prisutnosti</i> - 1. razred</button>
+               </form>
+               <form action="/filterdailytask2" method="get">
+                  <button type="submit" name="button" class="btn btn-outline-success btn-lg btn-block plan"><i>dokaz prisutnosti</i> - 2. razred</button>
+               </form>
+               <form action="/filterdailytask3" method="get">
+                  <button type="submit" name="button" class="btn btn-outline-success btn-lg btn-block plan"><i>dokaz prisutnosti</i> - 3. razred</button>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<%- include("partials/footer"); -%>

@@ -1,0 +1,29 @@
+<%- include('partials/header1') %>
+<div class="">
+   <div class="row mb-3 row1">
+      <%- include("partials/menu1"); -%>
+      <div class="col-md-8 themed-grid-col">
+         <h4 class="srednji">
+            Login sesije od učenika <b><%= reqUserName %></b> korisničkog imena <b><%= username %></b>:
+         </h4>
+         <table>
+            <tr>
+               <th>Vrijeme</th>
+            </tr>
+            <tr>
+               <%  loginsessions.forEach(function(loginsession){ %>
+               <% var day = loginsession.dateOfLogin.getDate() %>
+               <% var month = loginsession.dateOfLogin.getMonth() %>
+               <% var year = loginsession.dateOfLogin.getFullYear() %>
+               <% var hours = loginsession.dateOfLogin.getHours() %>
+               <% var minutes = "0" + loginsession.dateOfLogin.getMinutes() %>
+               <% var seconds = "0" + loginsession.dateOfLogin.getSeconds() %>
+               <% var dateString = day + "." +(month + 1) + "." + year + ". " + (hours+2) + ":" + minutes.substr(-2) + ":" + seconds.substr(-2) %>
+               <td><%= dateString %></td>
+            </tr>
+            <% }) %>
+         </table>
+      </div>
+   </div>
+</div>
+<%- include("partials/footer"); -%>

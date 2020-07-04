@@ -1,7 +1,7 @@
 <%- include('partials/header2') %>
 <div class="">
    <div class="row mb-3 row1">
-      <%- include("partials/menu"); -%>
+      <%- include("partials/menu1"); -%>
       <div class="col-md-8 themed-grid-col">
          <h4 class="srednji">
             Dokaz prisutnosti na dan <%= nowDate %>.
@@ -9,17 +9,17 @@
          <div class="probni">
             <p>Ovdje odgovorite na dnevni zadatak koji će ujedno biti i dokaz prisutnosti na satu na današnji dan. Pojedino pitanje (dnevni zadatak) samo za sebe ne donosi ocjenu, ali više njih zajedno bi mogli biti ocijenjeni. Ocjena će se formirati na temelju truda uloženog u odgovaranje i na temelju sadržaja odgovora.</p>
             <p>Sretno! ㋡</p>
-            <button type="button" class="btn btn-secondary" id="onclick" onclick="myFunction()">Idi na test</button>
+            <button type="button" class="btn btn-secondary" id="onclick" onclick="myFunction()">Idi na dnevni zadatak</button>
          </div>
          <form action="/day-task" method="post">
             <div class="prvo hidden" id="myDIV" >
-               <h5>Moj odgovor za dokaz prisutnosti na satu na dan <%= nowDate %>. :</h5>
+               <h5>Moj odgovor na pitanje s Loomena za dokaz prisutnosti na satu na dan <%= nowDate %>. :</h5>
                <div class="form-group">
                   <textarea class="form-control" rows="5" id="comment" name="daytask"></textarea>
                </div>
                <div class="form-check disabled probni">
-                  <input class="form-check-input" type="radio" id="" value="daily-task <%= nowDate %>." name="kod" checked required>
-                  <label class="form-check-label" for="">
+                  <input class="form-check-input" type="radio" id="radio" value="daily-task <%= nowDate %>." name="kod" checked required>
+                  <label class="form-check-label" for="radio">
                   kod: daily-task_<%= nowDate %>.
                   </label>
                </div>
@@ -28,6 +28,5 @@
          </form>
       </div>
    </div>
-</div>
 </div>
 <%- include("partials/footer"); -%>

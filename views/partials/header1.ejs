@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="hr-HR">
    <head>
       <title>Test Platform</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="Pratite aktivnost svojih učenika putem dnevnih zadataka. Pisanje online ispita.">
+      <meta name="keywords" content="Ispit, dnevni zadatak, praćenje učenika">
+      <meta name="author" content="O.K.">
       <link href="https://fonts.googleapis.com/css?family=Quantico:400,700&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
       <link rel="stylesheet" href="/css/style.css">
@@ -13,14 +16,14 @@
          integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
          crossorigin="anonymous"></script>
       <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-      <script type="text/javascript" src="/script.js"></script>
+      <script src="/script.js"></script>
    </head>
    <body onload="myFunction5()">
       <hr class="hr">
       <div class="right">
-         <p class="test d-table-cell"><a href="/"><img class="img" src="/title-test.png" title="Početna"></a> - Test Platform</p>
+         <p class="test d-table-cell"><a href="/"><img class="img" src="/title-test.png" title="Početna" alt="title-test"></a> - Test Platform</p>
          <div class="d-table-cell tar">
-            <a type="submit" class="btn btn-light btn-sm letter" id="register"><small>Dobrodošli </small><%= korisnik %></a>
+            <a type="submit" class="btn btn-light btn-sm letter user" id="register" title="Moji podaci" href="/users_data/<%= userId %>"><small>Dobrodošli </small><%= korisnik %></a>
             <a type="submit" class="btn btn-danger btn-sm letter" id="odjava" href="/logout">Odjava</a>
          </div>
       </div>
@@ -32,6 +35,7 @@
             <a type="submit" class="btn btn-secondary btn-sm letter" id="dnevni" href="/daytasks">Dnevni zadatak</a>
             <a type="submit" class="btn btn-secondary btn-sm letter" id="exTest" href="/downloadDB-json">Export tests</a>
             <a type="submit" class="btn btn-secondary btn-sm letter" id="exDnevni" href="/downloadDB_day-json">Export dailytasks</a>
+            <a type="submit" class="btn btn-secondary btn-sm letter" id="testovi" href="/filter">Filter</a>
          </div>
       </div>
       <hr class="hr">

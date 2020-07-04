@@ -3,7 +3,7 @@
    <div class="row mb-3">
       <%- include("partials/menu1"); -%>
       <div class="col-md-8 themed-grid-col data">
-         <h2>Baza korisnika / učenika:</h2>
+         <h2>Baza dnevnih ispita za dokaz prisutnosti na satu:</h2>
          <table>
             <tr>
                <th>Učenik</th>
@@ -12,11 +12,18 @@
                <th>Datum spremanja</th>
             </tr>
             <%  daytasks.forEach(function(daytask){ %>
+            <% var day = daytask.date.getDate() %>
+            <% var month = daytask.date.getMonth() %>
+            <% var year = daytask.date.getFullYear() %>
+            <% var hours = daytask.date.getHours() %>
+            <% var minutes = "0" + daytask.date.getMinutes() %>
+            <% var seconds = "0" + daytask.date.getSeconds() %>
+            <% var dateString = day + "." +(month + 1) + "." + year + ". " + (hours+2) + ":" + minutes.substr(-2) + ":" + seconds.substr(-2) %>
             <tr>
                <td><%= daytask.username %></td>
                <td><%= daytask.daytask %></td>
                <td><%= daytask.kod %></td>
-               <td><%= daytask.date.toLocaleString() %></td>
+               <td><%= dateString %></td>
             </tr>
             <% }) %>
          </table>

@@ -1,0 +1,26 @@
+<%- include("partials/header2"); -%>
+<div class="">
+   <div class="row mb-3 row1">
+      <%- include("partials/menu"); -%>
+      <div class="col-md-8 themed-grid-col data">
+         <small class="error">
+            <script>
+               function Redirect() {
+                  window.location="/logout";
+               }
+               
+               document.write("Biti ćete odlogirani za 15 sekundi.");
+               setTimeout('Redirect()', 15000);
+               
+            </script>
+         </small>
+         <div class="success">
+            <h4>Success</h4>
+            <h5>Čestitam!</h5>
+            <h5>Odgovori uspješno spremljeni.</h5>
+            <img src="/Thumb_up.png" class="img4" title="Izvor: Pixabay" alt="thumb_up">
+         </div>
+      </div>
+   </div>
+</div>
+<%- include("partials/footer"); -%>

@@ -1,19 +1,17 @@
 <%- include("partials/header2"); -%>
 <div class="">
    <div class="row mb-3 row1">
-      <%- include("partials/menu"); -%>
+      <%- include("partials/menu1"); -%>
       <div class="col-md-8 themed-grid-col data">
          <div class="error">
             <h4>ERROR</h4>
-            <h5>Došlo je do pogreške.</h5>
-            <h5>Nemate pristup ovoj stranici.</h5>
-            <h5>Pokušajte ponovno.</h5>
-            <img src="/error.png" class="img1" title="Izvor: Pixabay" alt="error">
+            <h1>Ups! Prošla je ponoć 😭</h1>
+            <h1>Vrati se nakon sljedećeg sata fizike </h1>
          </div>
          <script>
             setTimeout(function(){
             history.back();
-                  }, 3000)
+                  }, 15000)
          </script>
       </div>
    </div>

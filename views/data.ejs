@@ -1,0 +1,30 @@
+<%- include('partials/header1') %>
+<div class="">
+   <div class="row mb-3 row1">
+      <%- include("partials/menu1"); -%>
+      <div class="col-md-8 themed-grid-col">
+         <h4 class="srednji">
+            Podaci o učeniku:
+         </h4>
+         <table>
+            <tr>
+               <th>Ime</th>
+               <th>Razred</th>
+               <th>username</th>
+            </tr>
+            <tr>
+               <td><%= name %></td>
+               <td><%= classroom %></td>
+               <td><%= username %></td>
+            </tr>
+         </table>
+         <div class="dnevni">
+            <a type="submit" class="btn btn-light btn-sm letter user" title="Dnevni zadaci" href="/users/<%= username %>/<%= name %>/dailytasks">Poslani dnevni zadaci</a>
+         </div>
+         <div class="dnevni">
+            <a type="submit" class="btn btn-light btn-sm letter user" title="Login sesije" href="/users/<%= username %>/<%= name %>/loginsesions">Login sesije</a>
+         </div>
+      </div>
+   </div>
+</div>
+<%- include("partials/footer"); -%>

@@ -1,0 +1,30 @@
+<%- include("partials/header2"); -%>
+<div class="">
+   <div class="row mb-3 row1">
+      <%- include("partials/menu"); -%>
+      <div class="col-md-8 themed-grid-col data">
+         <small class="error">
+            <script>
+               function Redirect() {
+                  window.location="/";
+               }
+               
+               document.write("Biti ćete preusmjereni na početnu stranicu za 25 sekundi.");
+               setTimeout('Redirect()', 25000);
+               
+            </script>
+         </small>
+         <div class="success">
+            <h4>Success</h4>
+            <h5>Čestitam!</h5>
+            <h5>Odgovor uspješno spremljen.</h5>
+            <div class="crna">
+               <p>Misao dana:</p>
+               <p> <%= randomPerk %> </p>
+            </div>
+            <img src="/Thumb_up.png" class="img4" title="Izvor: Pixabay" alt="thumb_up">
+         </div>
+      </div>
+   </div>
+</div>
+<%- include("partials/footer"); -%>

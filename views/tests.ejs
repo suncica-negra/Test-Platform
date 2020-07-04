@@ -32,7 +32,7 @@
             <% var year = test.date.getFullYear() %>
             <% var hours = test.date.getHours() %>
             <% var minutes = "0" + test.date.getMinutes() %>
-            <% var dateString = day + "." +(month + 1) + "." + year + " " + hours + ":" + minutes.substr(-2) %>
+            <% var dateString = day + "." +(month + 1) + "." + year + " " + (hours+2) + ":" + minutes.substr(-2) %>
             <tr>
                <td><small><%= dateString %></small></td>
                <td><small><%= test.username %></small></td>

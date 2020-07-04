@@ -76,7 +76,7 @@ tr:nth-child(even) {
 .img1 {
   height: auto;
   width: 100%;
-  max-width: 484.4px;
+  max-width: 322.9px;
   margin-bottom: 40px;
 }
 
@@ -86,12 +86,35 @@ tr:nth-child(even) {
   margin-bottom: 40px;
 }
 
+.img3 {
+  height: auto;
+  width: 100%;
+  max-width: 136.6px;
+}
+
+.img4 {
+  height: auto;
+  width: 100%;
+  max-width: 231.6px;
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+
 .footer {
   padding-top: 25px;
   text-align: center;
   bottom: 0;
   width: 100%;
   height: 115px;
+  background-color: #62b01e;
+}
+
+.footer1 {
+  padding: 5px;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
   background-color: #62b01e;
 }
 
@@ -159,6 +182,12 @@ a:hover {
   text-align: center;
 }
 
+.success {
+  color: #62b01e;
+  text-align: center;
+  margin-top: 30px;
+}
+
 .data {
   text-align: center;
 }
@@ -170,4 +199,30 @@ a:hover {
 
 .srednji {
   margin-top: 30px;
+}
+
+.con {
+  margin-left: 0;
+}
+
+.plan {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.crna {
+  color: #1e1bbf;
+  margin: 40px;
+}
+
+.user {
+  background-color: #b3b1aa;
+}
+
+.dnevni {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
 }

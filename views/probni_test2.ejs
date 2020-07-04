@@ -7,7 +7,8 @@
             <div class="flashes">
                <% if (messages) { %>
                <% if (messages.success) { %>
-               <div class="flash error"><%= messages.success %></div>
+               <div class="flash error"><%= messages.success %>
+               </div>
                <% } %>
                <% } %>
             </div>
@@ -80,15 +81,15 @@
             <div class="cetvrto hidden" id="myDIV3" >
                <h5>4/7. Što vam najviše fali tijekom karantene / (samo)izolacije?</h5>
                <div class="form-group">
-                  <em><label for="comment"> Upiši odgovor:</label></em>
-                  <textarea class="form-control" rows="5" id="comment" name="cetvrto"></textarea>
+                  <em><label for="text"> Upiši odgovor:</label></em>
+                  <textarea id="text" class="form-control" rows="5" name="cetvrto"></textarea>
                </div>
                <button type="button" class="btn btn-secondary" onclick="myFunction4()">sljedeće pitanje</button>
             </div>
             <div class="hidden" id="myDIV4" >
                <h5>5/7. Kako vam za sad ide nastava fizike? Opišite s kojim problemima i izazovima ste se sreli!</h5>
                <div class="form-group">
-                  <textarea class="form-control" rows="5" id="comment" name="peto"></textarea>
+                  <textarea class="form-control" rows="5" name="peto"></textarea>
                </div>
                <button type="button" class="btn btn-secondary" onclick="myFunction7()">sljedeće pitanje</button>
             </div>
@@ -96,7 +97,7 @@
                <h5>6/7. Sami si zadajte pitanje iz fizike i odgovorite na njega! Jedini uvjet je da pitanje bude iz dijela gradiva kojeg ste radili sami doma otkad je počela nastava preko interneta (dakle od 16.3. pa na dalje).</h5>
                <p>OBAVEZNO mora pisati i pitanje, a ne samo odgovor!</p>
                <div class="form-group">
-                  <textarea class="form-control" rows="5" id="comment" name="sesto"></textarea>
+                  <textarea class="form-control" rows="5" name="sesto"></textarea>
                </div>
                <button type="button" class="btn btn-secondary" onclick="myFunction8()">sljedeće pitanje</button>
             </div>
@@ -115,8 +116,8 @@
                   <label><input type="checkbox" value="Bilo je problema s brojačem vremena." name="sedmo3"> Bilo je problema s brojačem vremena.</label>
                </div>
                <div class="form-group">
-                  <label for="comment" > Ukoliko se gore navedeni problemi ne odnose na vas ili ste imali (uz gore nevedeni) još neki problem tada samostalno opišite problem(e) ovdje:</label>
-                  <textarea class="form-control" rows="5" id="comment" name="sedmo4"></textarea>
+                  <label for="text1" > Ukoliko se gore navedeni problemi ne odnose na vas ili ste imali (uz gore nevedeni) još neki problem tada samostalno opišite problem(e) ovdje:</label>
+                  <textarea id="text1" class="form-control" rows="5" name="sedmo4"></textarea>
                </div>
                <div class="form-check disabled probni">
                   <input class="form-check-input" type="radio" id="exampleRadios3" value="probni_test_01" name="kod" checked required>
@@ -125,8 +126,8 @@
                   </label>
                </div>
                <input id="autoClick" class="btn btn-success" type="submit" value="Spremi i završi"/>
+            </div>
          </form>
-         </div>
          <div id="clockdiv">
             <div>
                <span id='timer' class="seconds"></span>
@@ -136,25 +137,15 @@
       </div>
    </div>
 </div>
-</div>
-<script type = "text/javascript" >
+<script>
    history.pushState(null, null, 'pagename');
    window.addEventListener('popstate', function(event) {
    history.pushState(null, null, 'pagename');
-   });
-   
-   
-   
+   });   
        function disableF5(e) { if ((e.which || e.keyCode) == 116 || (e.which || e.keyCode) == 82) e.preventDefault(); };
    $(document).ready(function(){
         $(document).on("keydown", disableF5);
-   });
-   
-   
-   
-   
-   document.addEventListener('contextmenu', event => event.preventDefault());
-   
-   
+   });   
+   document.addEventListener('contextmenu', event => event.preventDefault());   
 </script>
 <%- include("partials/footer"); -%>

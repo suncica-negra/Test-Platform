@@ -1,9 +1,18 @@
+<div class="footer1 col-sm-2">
+   <% var arr = [0,1,2,3,4,5,6] %>
+   <% var randomPicture = arr[Math.floor(Math.random() * arr.length)] %>
+   <% if (randomPicture === 0 || randomPicture === 1 || randomPicture === 2 || randomPicture === 3){ %>
+   <a target="_blank" href="https://www.youtube.com/channel/UCHrP5tERyeVVx0J7WlOpyPg/videos"><img class="img3" src="/<%= randomPicture %>.png"  alt="random-pic"></a>
+   <% } else { %>
+   <a target="_blank" href="https://www.youtube.com/channel/UCyy5vfDTqRQydBnycsJliaQ/videos"><img class="img3" src="/<%= randomPicture %>.png"  alt="random-pic"></a>
+   <% } %>
+</div>
 <div class="footer">
    <p>
       Copyright <i class="far fa-copyright"></i> <script>document.write(new Date().getFullYear());</script> 
    </p>
    <p>Powered by <strong><a href="https://suncica-negra.github.io/Lagonatis/" target="_blank" class="orhidea">DEA</a></strong></p>
 </div>
-<script type="text/javascript">window.onload = CreateTimer("timer", 360);</script>
+<script>window.onload = CreateTimer("timer", 360);</script>
 </body>
 </html>
