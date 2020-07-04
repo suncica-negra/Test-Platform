@@ -24,7 +24,7 @@ Aplikacija je funkcionalna i online je: https://test--platform.herokuapp.com
 
 ## POČETNA STRANICA / landing page
 
-![alt text]()
+![alt text](https://github.com/suncica-negra/Test-Platform/blob/master/public/test1-1.png)
 
 ## REGISTRACIJA / register
 
